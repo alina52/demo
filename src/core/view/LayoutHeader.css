@@ -1,0 +1,16 @@
+.header-appbar {
+    position: fixed;
+}
+.header-tab-logo {
+    font-size: 20px !important;
+    font-weight: bolder !important;
+}
+.logo {
+    width: 310px;
+    display: inline-block !important;
+}
+
+.header-tabs {
+width: calc(100vw - 310px);
+display: inline-block !important;
+}
