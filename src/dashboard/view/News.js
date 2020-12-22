@@ -17,10 +17,9 @@ class TableRow extends Component {
                         <p className="news-list-news">{item.content}</p>
                     </CardContent>
                     <CardActions>
-                        <Button variant="contained" color="primary" className="news-analysis"> 事件详情 </Button>
+                        <Button variant="contained" color="primary" className="news-analysis" onClick={() => this.props.onClickAnalyzeNews(item.id)}> 事件详情 </Button>
                     </CardActions>
                 </Card>
-                
             </li>
         )
     }
@@ -33,11 +32,11 @@ export default class News extends Component {
 
     constructor(props) {
         super(props)
-        this.onClickAnalyzeNews = this.onClickAnalyzeNews.bind(this)
+        this.openNewsAnalysisDetailPopup = this.openNewsAnalysisDetailPopup.bind(this)
     }
 
-    onClickAnalyzeNews(event) {
-        this.handleAnalysisNews(event.target.value)
+    openNewsAnalysisDetailPopup(newsId) {
+        this.props.openNewsAnalysisDetailPopup(newsId)
     }
 
     render() {
@@ -48,7 +47,7 @@ export default class News extends Component {
                 <div className="new-list-table">
                     <ul className="infinte-list">
                         {newsList.map(item => (
-                            <TableRow key={item.id} item={item}/>
+                            <TableRow key={item.id} item={item} onClickAnalyzeNews={this.openNewsAnalysisDetailPopup}/>
                         ))}
                     </ul>
                 </div>

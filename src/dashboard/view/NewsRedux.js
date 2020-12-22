@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { fetchAllNews } from 'src/dashboard/actions'
+import { fetchAllNews, fetchSelectedNewsAnalysisResult } from 'src/dashboard/actions'
 import News from 'src/dashboard/view/News'
 
 const mapStateToProps = (state, ownProps) => {
@@ -16,6 +16,10 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         requestNews : () => {
             dispatch(fetchAllNews())
         },
+
+        openNewsAnalysisDetailPopup : (newsId) => {
+            dispatch(fetchSelectedNewsAnalysisResult(newsId))
+        }
     }
 }
 
