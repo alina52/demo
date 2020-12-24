@@ -49,7 +49,7 @@ export default class TimelinePage extends Component {
                                     <Typography vvariant="h6" display="block"> {event.title}</Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button variant="contained" color="primary" className="news-analysis" onClick={() => this.openNewsAnalysisDetailPopup(event.id)}> 事件详情 </Button>
+                                    <Button variant="outlined" size="small" color="primary" className="news-analysis" onClick={() => this.openNewsAnalysisDetailPopup(event.id)}> 事件详情 </Button>
                                 </CardActions>
                             </Card>
                             ))}

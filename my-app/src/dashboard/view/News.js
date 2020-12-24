@@ -11,14 +11,14 @@ class TableRow extends Component {
         const item = this.props.item
         return (
             <li className='infinte-row table-content' id={item.id}>
-                <Card className="new-name">
+                <Card className="news-contract">
                     <CardContent>
                         <Typography variant="h5" component="h2"> {item.title}</Typography>
                         <Typography variant="overline" display="block"> {item.time}</Typography>
                         <p className="news-list-news">{item.content}</p>
                     </CardContent>
                     <CardActions>
-                        <Button variant="contained" color="primary" className="news-analysis" onClick={() => this.props.onClickAnalyzeNews(item.id)}> 事件详情 </Button>
+                        <Button variant="outlined" size="small" color="primary" className="news-analysis" onClick={() => this.props.onClickAnalyzeNews(item.id)}> 事件详情 </Button>
                     </CardActions>
                 </Card>
             </li>

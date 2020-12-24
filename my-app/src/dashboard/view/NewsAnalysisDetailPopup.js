@@ -51,7 +51,7 @@ export default class NewsAnalysisDetailPopup extends Component {
                     ))}
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={() => this.handleClose()} color="primary"> Close </Button>
+                    <Button onClick={() => this.handleClose()} color="primary" variant="outlined" size="small"> 关闭 </Button>
                 </DialogActions>
             </Dialog>
         )
