@@ -30,21 +30,21 @@ export default class NewsAnalysisDetailPopup extends Component {
         const selectedNewsAnalysisResult = this.props.selectedNewsAnalysisResult || []
         const isNewsAnalysisDetailPopupOpen = this.props.isNewsAnalysisDetailPopupOpen
         return (
-            <Dialog className="selected-news-analysis-dialog" fullWidth maxWidth="lg" open={isNewsAnalysisDetailPopupOpen} >
+            <Dialog className="selected-news-analysis-dialog" fullWidth maxWidth="md" open={isNewsAnalysisDetailPopupOpen} >
                 <DialogTitle className="selected-news-analysis-dialog">政治新闻分析结果</DialogTitle>
                 <DialogContent>
-                    <DialogContentText>我不知道写什么东西。建议就是描述一下下面的表格是啥东西。但是也可以不写。</DialogContentText>
+                    <DialogContentText>{selectedNewsAnalysisResult.content}</DialogContentText>
                     {selectedNewsAnalysisResult && selectedNewsAnalysisResult.events && selectedNewsAnalysisResult.events.map(item => (
                         <TableContainer component={Paper}>
                         <Table className="selected-news-analysis-table" aria-label="simple table">
                             <TableBody>
-                                <TableRow key='0'> <TableCell align="left">叙事框架</TableCell> <TableCell align="left">事件要素</TableCell> </TableRow>
-                                <TableRow key='1'> <TableCell align="left">Source</TableCell> <TableCell align="left">{item.source && item.source.join(", ")}</TableCell> </TableRow>
-                                <TableRow key='2'> <TableCell align="left">Target</TableCell> <TableCell align="left">{item.target}</TableCell> </TableRow>
-                                <TableRow key='3'> <TableCell align="left">Trigger</TableCell> <TableCell align="left">{item.trigger}</TableCell> </TableRow>
-                                <TableRow key='4'> <TableCell align="left">Type</TableCell> <TableCell align="left">{item.type}</TableCell> </TableRow>
-                                <TableRow key='5'> <TableCell align="left">sentence</TableCell> <TableCell align="left" className="news-detail-sentence">{item.Sentence}</TableCell> </TableRow>
-                                <TableRow key='6'> <TableCell align="left">时间</TableCell> <TableCell align="left">{selectedNewsAnalysisResult.time}</TableCell> </TableRow>
+                                <TableRow key='0'> <TableCell align="left" component="th" scope="row">叙事框架</TableCell> <TableCell align="left">事件要素</TableCell> </TableRow>
+                                <TableRow key='1'> <TableCell align="left" component="th" scope="row">主体</TableCell> <TableCell align="left">{item.source && item.source.join(", ")}</TableCell> </TableRow>
+                                <TableRow key='2'> <TableCell align="left" component="th" scope="row">客体</TableCell> <TableCell align="left">{item.target}</TableCell> </TableRow>
+                                <TableRow key='3'> <TableCell align="left" component="th" scope="row">触发词</TableCell> <TableCell align="left">{item.trigger}</TableCell> </TableRow>
+                                <TableRow key='4'> <TableCell align="left" component="th" scope="row">事件类型</TableCell> <TableCell align="left">{item.type}</TableCell> </TableRow>
+                                <TableRow key='5'> <TableCell align="left" component="th" scope="row">事件句</TableCell> <TableCell align="left" className="news-detail-sentence">{item.sentence}</TableCell> </TableRow>
+                                <TableRow key='6'> <TableCell align="left" component="th" scope="row">时间</TableCell> <TableCell align="left">{selectedNewsAnalysisResult.time}</TableCell> </TableRow>
                             </TableBody>
                         </Table>
                     </TableContainer>

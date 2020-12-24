@@ -14,6 +14,7 @@ class TableRow extends Component {
                 <Card className="new-name">
                     <CardContent>
                         <Typography variant="h5" component="h2"> {item.title}</Typography>
+                        <Typography variant="overline" display="block"> {item.time}</Typography>
                         <p className="news-list-news">{item.content}</p>
                     </CardContent>
                     <CardActions>
