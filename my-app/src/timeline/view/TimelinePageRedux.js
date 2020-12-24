@@ -2,12 +2,12 @@ import { connect } from 'react-redux'
 import { fetchAllNewsSortedByTime } from 'src/timeline/actions'
 import { fetchSelectedNewsAnalysisResult } from 'src/dashboard/actions'
 
-import Timeline from 'src/timeline/view/Timeline'
+import TimelinePage from 'src/timeline/view/TimelinePage'
 
 const mapStateToProps = (state, ownProps) => {
     const nextProps = Object.assign({}, ownProps)
     Object.assign(nextProps, {
-        newsList : state.dashboardReducer.newsList
+        newListForTimeline : state.timelineReducer.newListForTimeline
     })
     return nextProps
 }
@@ -25,4 +25,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Timeline);
+export default connect(mapStateToProps, mapDispatchToProps)(TimelinePage);

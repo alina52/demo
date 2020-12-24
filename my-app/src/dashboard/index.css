@@ -57,8 +57,8 @@
     -webkit-box-orient: vertical;
 }
 
-.news-detail-sentence {
-  
+.MuiPaper-root {
+  background-color : #dddddd30 !important;
 }
 
 

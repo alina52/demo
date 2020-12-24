@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import 'src/core/view/LayoutBody.css'
 import Dashboard from 'src/dashboard'
+import TimelineContent from 'src/timeline'
+
 export default class LayoutBody extends Component {
     render() {
         const { tabValue } = this.props
@@ -10,7 +12,7 @@ export default class LayoutBody extends Component {
                 {/* {tabValue === 'dashboard' && <Dashboard />}
                     {tabValue === 'timeline' && <TimeLine />} */}
                     {tabValue === 'dashboard' && <Dashboard />}
-                    {tabValue === 'timeline' && "Timeline"}
+                    {tabValue === 'timeline' && <TimelineContent />}
                 </div>
             </section>
         )

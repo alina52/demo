@@ -1,0 +1,10 @@
+.MuiTimeline-root {
+  margin-left: -13% !important;
+  position: absolute;
+  width: 76%;
+  z-index: 1000;
+}
+
+.MuiPaper-root {
+    background-color : #dddddd30 !important;
+  }

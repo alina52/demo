@@ -6,6 +6,7 @@ import { createLogger } from "redux-logger"
 import thunkMiddleware from "redux-thunk"
 import * as appReducers from "src/app/reducers"
 import * as dashboardReducers from "src/dashboard/reducers"
+import * as timelineReducers from "src/timeline/reducers"
 import * as coreReducers from "src/core/reducers"
 
 export default function configureStore(preloadedState, history) {
@@ -20,7 +21,8 @@ export default function configureStore(preloadedState, history) {
         reducers,
         appReducers,
         coreReducers,
-        dashboardReducers
+        dashboardReducers,
+        timelineReducers
     )
 
     const rootReducer = combineReducers(reducers)
