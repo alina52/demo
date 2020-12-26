@@ -1,0 +1,3 @@
+export const CORE_URL_GEOJSON = '/world-map.json'
+export const CORE_REQUEST_GEOJSON = 'CORE_REQUEST_GEOJSON'
+export const CORE_REVEIVE_GEOJSON = 'CORE_REVEIVE_GEOJSON'

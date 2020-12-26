@@ -1,5 +1,4 @@
 import * as Constants from 'src/dashboard/constants'
-import { object } from 'prop-types'
 
 const processReceiveSelectedNewsDetail = (state, action) => {
     const newsList = Object.deepCopy(state.newsList)

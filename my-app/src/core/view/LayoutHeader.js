@@ -25,10 +25,10 @@ export default class LayoutHeader extends Component {
                 <Tabs className="header-tabs" indicatorColor="primary" textColor="primary" value={tabValue} onChange={this.handleTabChange}>
                     <Tab value="dashboard" label="" />
                     <Tab value="dashboard" label="" />
-                    <Tab value="dashboard" label="" />
                     <Tab className="header-tab-logo" label="中文政治事件提取" />
                     <Tab value="dashboard" label="DashBoard" />
                     <Tab value="timeline" label="TimeLine" />
+                    <Tab value="map" label="Map" />
                 </Tabs>
             </AppBar>
 

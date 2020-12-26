@@ -8,6 +8,7 @@ import * as appReducers from "src/app/reducers"
 import * as dashboardReducers from "src/dashboard/reducers"
 import * as timelineReducers from "src/timeline/reducers"
 import * as coreReducers from "src/core/reducers"
+import * as worldMapReducers from 'src/map/reducers'
 
 export default function configureStore(preloadedState, history) {
     configureUrlQuery({history:history})
@@ -22,7 +23,8 @@ export default function configureStore(preloadedState, history) {
         appReducers,
         coreReducers,
         dashboardReducers,
-        timelineReducers
+        timelineReducers,
+        worldMapReducers
     )
 
     const rootReducer = combineReducers(reducers)

@@ -95,7 +95,8 @@ const fetch2 = (dispatch, uri, options={}, requestType, successType, errorType) 
                 json.status = status
 
                 if (appConfig.mockData) {
-                    setTimeout(() => successHandler(dispatch, options, requestType, successType, json), 1000)
+                    // setTimeout(() => successHandler(dispatch, options, requestType, successType, json), 1000)
+                    successHandler(dispatch, options, requestType, successType, json)
                 } else {
                     successHandler(dispatch, options, requestType, successType, json)
                 }

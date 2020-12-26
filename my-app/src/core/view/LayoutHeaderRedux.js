@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { clearHeaderTabPageData, initTabValue, updateTabValue } from 'src/core/actions'
+import { initTabValue, updateTabValue } from 'src/core/actions'
 import LayoutHeader from 'src/core/view/LayoutHeader'
 
 const mapStateToProps = (state, ownProps) => {
@@ -15,7 +15,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
        
 
         changeHeaderPageTab : (tabValue) => {
-            // dispatch(clearHeaderTabPageData())
             dispatch(updateTabValue(tabValue))
         },
 

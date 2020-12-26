@@ -1,4 +1,4 @@
-export const DASHBOARD_URL_NEWS_LIST = '/social-events.json'
+export const DASHBOARD_URL_NEWS_LIST = '/user-upload-social-events.json'
 export const DASHBOARD_REQUEST_NEWS_LIST = 'DASHBOARD_REQUEST_NEWS_LIST'
 export const DASHBOARD_REVEIVE_NEWS_LIST = 'DASHBOARD_REVEIVE_NEWS_LIST'
 
