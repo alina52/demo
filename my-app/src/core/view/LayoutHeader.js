@@ -22,13 +22,13 @@ export default class LayoutHeader extends Component {
         const { tabValue } = this.props
         return (
             <AppBar className="header-appbar" color="default">
-                <Tabs className="header-tabs" indicatorColor="primary" textColor="primary" value={tabValue} onChange={this.handleTabChange}>
+                <Tabs className="header-tabs" indicatorColor="primary" value={tabValue} onChange={this.handleTabChange}>
                     <Tab value="dashboard" label="" />
                     <Tab value="dashboard" label="" />
                     <Tab className="header-tab-logo" label="中文政治事件提取" />
-                    <Tab value="dashboard" label="DashBoard" />
-                    <Tab value="timeline" label="TimeLine" />
-                    <Tab value="map" label="Map" />
+                    <Tab value="dashboard" label="事件总览" />
+                    <Tab value="timeline" label="时间线" />
+                    <Tab value="map" label="事件地图" />
                 </Tabs>
             </AppBar>
 

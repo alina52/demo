@@ -13,12 +13,12 @@ class TableRow extends Component {
             <li className='infinte-row table-content' id={item.id}>
                 <Card className="news-contract">
                     <CardContent>
-                        <Typography variant="h5" component="h2"> {item.title}</Typography>
-                        <Typography variant="overline" display="block"> {item.time}</Typography>
-                        <p className="news-list-news">{item.content}</p>
+                        <Typography variant="h5" component="h2"  display="inline"> {item.title}</Typography>
+                        <Typography variant="overline" display="inline" align="right" className="time"> {item.time}</Typography>
+                        <p className="news-list-news">&ensp;&ensp;&ensp;&ensp;{item.content}</p>
                     </CardContent>
-                    <CardActions>
-                        <Button variant="outlined" size="small" color="primary" className="news-analysis" onClick={() => this.props.onClickAnalyzeNews(item.id)}> 事件详情 </Button>
+                    <CardActions className="button">
+                        <Button variant="outlined" size="small" color="default" className="news-analysis" onClick={() => this.props.onClickAnalyzeNews(item.id)}> 事件详情 </Button>
                     </CardActions>
                 </Card>
             </li>

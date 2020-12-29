@@ -30,15 +30,15 @@ export default class NewsAnalysisDetailPopup extends Component {
         const selectedNewsAnalysisResult = this.props.selectedNewsAnalysisResult || []
         const isNewsAnalysisDetailPopupOpen = this.props.isNewsAnalysisDetailPopupOpen
         return (
-            <Dialog className="selected-news-analysis-dialog" fullWidth maxWidth="md" open={isNewsAnalysisDetailPopupOpen} >
-                <DialogTitle className="selected-news-analysis-dialog">政治新闻分析结果</DialogTitle>
+            <Dialog className="selected-news-analysis-dialog" maxWidth="md" open={isNewsAnalysisDetailPopupOpen} >
+                <DialogTitle className="selected-news-analysis-dialog">事件详情</DialogTitle>
                 <DialogContent>
-                    <DialogContentText>{selectedNewsAnalysisResult.content}</DialogContentText>
+                    <DialogContentText>&ensp;&ensp;&ensp;&ensp;{selectedNewsAnalysisResult.content}</DialogContentText>
                     {selectedNewsAnalysisResult && selectedNewsAnalysisResult.events && selectedNewsAnalysisResult.events.map(item => (
                         <TableContainer component={Paper}>
                         <Table className="selected-news-analysis-table" aria-label="simple table">
                             <TableBody>
-                                <TableRow key='0'> <TableCell align="left" component="th" scope="row">叙事框架</TableCell> <TableCell align="left">事件要素</TableCell> </TableRow>
+                                <TableRow key='0'> <TableCell align="left" component="th" scope="row"><b>事件要素</b></TableCell> <TableCell align="left"><b>内容</b></TableCell> </TableRow>
                                 <TableRow key='1'> <TableCell align="left" component="th" scope="row">主体</TableCell> <TableCell align="left">{item.source && item.source.join(", ")}</TableCell> </TableRow>
                                 <TableRow key='2'> <TableCell align="left" component="th" scope="row">客体</TableCell> <TableCell align="left">{item.target}</TableCell> </TableRow>
                                 <TableRow key='3'> <TableCell align="left" component="th" scope="row">触发词</TableCell> <TableCell align="left">{item.trigger}</TableCell> </TableRow>
@@ -51,7 +51,7 @@ export default class NewsAnalysisDetailPopup extends Component {
                     ))}
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={() => this.handleClose()} color="primary" variant="outlined" size="small"> 关闭 </Button>
+                    <Button onClick={() => this.handleClose()} color="default" variant="outlined" size="small"> 关闭 </Button>
                 </DialogActions>
             </Dialog>
         )
