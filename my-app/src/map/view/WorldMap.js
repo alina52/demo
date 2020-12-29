@@ -67,7 +67,7 @@ export default class WorldMap extends Component {
               calculable: true, // 是否显示拖拽用的手柄
               // 定义 在选中范围中 的视觉元素
               inRange: {
-                color: ['#9fb5ea', '#e6ac53', '#74e2ca', '#85daef', '#9feaa5', '#5475f5'] // 图元的颜色
+                color: ['#d0d0d0', '#adadad', '#5b5b5b', '#4c4c4c'] // 图元的颜色
             }
             },
             series: [
