@@ -6,5 +6,9 @@
 }
 
 .news-timeline-item-event {
-    background-color : #dddddd30 !important;
-  }
+    background-color : #f5f5f594 !important;
+}
+
+.news-timeline-analysis {
+  float: right;
+}

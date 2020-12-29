@@ -45,13 +45,14 @@ export default class TimelinePage extends Component {
                             <TimelineContent>
                             {item.events.map(event => (
                                 <Card className="news-timeline-item-event">
-                                <CardContent>
-                                    <Typography variant="h6" display="block"> {event.title}</Typography>
-                                </CardContent>
-                                <CardActions>
-                                    <Button variant="outlined" size="small" color="default" className="news-analysis" onClick={() => this.openNewsAnalysisDetailPopup(event.id)}> 事件详情 </Button>
-                                </CardActions>
-                            </Card>
+                                    <CardContent>
+                                        <Typography vvariant="h6" display="inline"> {event.title}</Typography>
+                                        <Button variant="outlined" size="small" color="default" className="news-timeline-analysis" onClick={() => this.openNewsAnalysisDetailPopup(event.id)}> 事件详情 </Button>
+                                    </CardContent>
+                                    <CardActions>
+                                        
+                                    </CardActions>
+                                </Card>
                             ))}
                             </TimelineContent>
                         </TimelineItem>
